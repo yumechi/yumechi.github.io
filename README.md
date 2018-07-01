@@ -5,6 +5,8 @@ Ticket-Driven Life
 ブログサイト等が散乱しているので整理。
 
 - [qiita - yumechi](https://qiita.com/yumechi)
+- [はてなブログ](https://namonakimichi.hatenablog.com/)
+
 
 ちょっとサボりすぎたので、毎日30分くらい勉強してコミットできるように頑張ります。。。（2017/05/31）
 
