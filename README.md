@@ -6,7 +6,7 @@ Ticket-Driven Life
 
 - [qiita - yumechi](https://qiita.com/yumechi)
 - [はてなブログ](https://namonakimichi.hatenablog.com/)
-
+- 昔は創作サイト等もリンクしていましたが、休止に入ったので削除してます
 
 ちょっとサボりすぎたので、毎日30分くらい勉強してコミットできるように頑張ります。。。（2017/05/31）
 
