@@ -18,3 +18,7 @@ Ticket-Driven Life
 こっちには総合的な問題のissue立てて、個別のリポジトリに個別のissue立てよっと。
 
 [プロフィールページを作った](./prof.md)
+
+# 最近の予定
+
+<iframe src="https://calendar.google.com/calendar/embed?src=l24umojcj2n9rj76roi35fuhr0%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
