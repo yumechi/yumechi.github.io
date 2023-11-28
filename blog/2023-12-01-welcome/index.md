@@ -1,5 +1,5 @@
 ---
-slug: /
+slug: /welcome
 title: Welcome
 authors: yumechi
 tags: [weclome]
