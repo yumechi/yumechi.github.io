@@ -1,24 +1,41 @@
-# Yumechi github page
+# Website
 
-Ticket-Driven Life
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-ブログサイト等が散乱しているので整理。
+### Installation
 
-- [qiita - yumechi](https://qiita.com/yumechi)
-- [はてなブログ](https://namonakimichi.hatenablog.com/)
-- 昔は創作サイト等もリンクしていましたが、休止に入ったので削除してます
+```
+$ yarn
+```
 
-ちょっとサボりすぎたので、毎日30分くらい勉強してコミットできるように頑張ります。。。（2017/05/31）
+### Local Development
 
-このリポジトリに勉強したものは入れていくはず。
+```
+$ yarn start
+```
 
-[https://github.com/yumechi/selfstudy](https://github.com/yumechi/selfstudy)
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-読書メモとかどーしよ。
-こっちには総合的な問題のissue立てて、個別のリポジトリに個別のissue立てよっと。
+### Build
 
-[プロフィールページを作った](./prof.md)
+```
+$ yarn build
+```
 
-# 最近の予定
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-<iframe src="https://calendar.google.com/calendar/embed?src=l24umojcj2n9rj76roi35fuhr0%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
