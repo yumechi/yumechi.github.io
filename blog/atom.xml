@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.yumechi.work/blog</id>
+    <title>yumechi Profile Site Blog</title>
+    <updated>2023-12-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.yumechi.work/blog"/>
+    <subtitle>yumechi Profile Site Blog</subtitle>
+    <icon>https://www.yumechi.work/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>https://www.yumechi.work/blog/welcome</id>
+        <link href="https://www.yumechi.work/blog/welcome"/>
+        <updated>2023-12-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[読んだ記事や技術メモを書いていく予定です。]]></summary>
+        <content type="html"><![CDATA[<p>読んだ記事や技術メモを書いていく予定です。</p>]]></content>
+        <author>
+            <name>yumechi</name>
+            <uri>https://github.com/yumechi</uri>
+        </author>
+        <category label="weclome" term="weclome"/>
+    </entry>
+</feed>
