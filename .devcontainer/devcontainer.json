@@ -1,0 +1,52 @@
+{
+  "name": "Docusaurus Development",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // テーマ・UI関連
+        "enkia.tokyo-night",
+    
+        // 言語サポート・開発支援
+        "ms-vscode.vscode-typescript-next",
+        "ms-vscode.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-json",
+        "ms-vscode.vscode-mdx",
+        "unifiedjs.vscode-mdx",
+        "davidanson.vscode-markdownlint",
+        
+        // ファイル・ナビゲーション
+        "christian-kohler.path-intellisense",
+        "alefragnani.bookmarks",
+        
+        // Copilot関連
+        "github.copilot",
+        "github.copilot-chat",
+
+        // 開発ツール
+        "jdx.mise",
+        "ms-azuretools.vscode-containers"
+      ],
+      "settings": {
+        // テーマ設定
+        "workbench.colorTheme": "Tokyo Night Storm",        
+        // TypeScript設定
+        "typescript.preferences.importModuleSpecifier": "relative",
+        "typescript.suggest.autoImports": true,
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        // 検索・その他
+        "search.exclude": {
+          "**/node_modules": true,
+          "**/build": true,
+          "**/.docusaurus": true
+        }
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

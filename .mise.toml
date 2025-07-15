@@ -1,0 +1,31 @@
+[tools]
+"node" = "24"
+"npm:pnpm" = "latest"
+
+[tasks.dev]
+description = "Start development server"
+run = "pnpm start"
+
+[tasks.build]
+description = "Build the project"
+run = "pnpm build"
+
+[tasks.serve]
+description = "Serve the built project"
+run = "pnpm serve"
+
+[tasks.install]
+description = "Install dependencies"
+run = "pnpm install"
+
+[tasks.typecheck]
+description = "Run TypeScript type checking"
+run = "pnpm typecheck"
+
+[tasks.audit]
+description = "Run security audit"
+run = "pnpm audit"
+
+[tasks.audit-fix]
+description = "Fix security vulnerabilities"
+run = "pnpm audit --fix"
