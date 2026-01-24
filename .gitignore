@@ -21,3 +21,8 @@ yarn-error.log*
 
 # Mise
 .mise.lock
+
+# TypeScript build outputs (transpiled from .ts files)
+/docusaurus.config.js
+/sidebars.js
+/src/**/*.js
