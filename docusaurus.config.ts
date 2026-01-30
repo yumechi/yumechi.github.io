@@ -151,6 +151,18 @@ const config: Config = {
               label: 'Wantedly',
               href: 'https://www.wantedly.com/id/motoki_hirao',
             },
+            {
+              label: 'YOUTRUST',
+              href: 'https://youtrust.jp/users/motoki_hirao',
+            },
+            {
+              label: 'Bluesky',
+              href: 'https://bsky.app/profile/yumechi.bsky.social',
+            },
+            {
+              label: 'mixi2',
+              href: 'https://mixi.social/@yumechi',
+            },
           ],
         },
         {
@@ -167,6 +179,10 @@ const config: Config = {
             {
               label: 'Zenn',
               href: 'https://zenn.dev/yumechi',
+            },
+            {
+              label: 'note',
+              href: 'https://note.com/yumechi',
             },
           ],
         },
