@@ -68,6 +68,7 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           routeBasePath: '/blog',
+          blogArchiveComponent: '@site/src/components/CustomBlogArchivePage',
         },
         theme: {
           customCss: './src/css/custom.css',
