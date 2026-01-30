@@ -1,0 +1,59 @@
+name: ブログ記事リクエスト
+description: 読んだ記事やスライドの感想をブログ記事として作成するリクエスト
+title: "[Blog] "
+labels: ["blog-request"]
+body:
+  - type: input
+    id: blog-title
+    attributes:
+      label: ブログ記事のタイトル
+      description: ブログページに表示されるタイトル
+      placeholder: "例: React Hooksの基礎を学んだ"
+    validations:
+      required: true
+
+  - type: input
+    id: slug
+    attributes:
+      label: slug
+      description: URLに使用される識別子（英数字とハイフンのみ）
+      placeholder: "例: react-hooks-basics"
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: タグ
+      description: 記事のタグ（カンマ区切り）
+      placeholder: "例: React, JavaScript, 学習"
+    validations:
+      required: false
+
+  - type: input
+    id: source-title
+    attributes:
+      label: 資料のタイトル
+      description: 読んだ記事/スライドのタイトル
+      placeholder: "例: React Hooks入門ガイド"
+    validations:
+      required: true
+
+  - type: input
+    id: source-url
+    attributes:
+      label: 資料のURL
+      description: 資料へのリンク
+      placeholder: "https://example.com/article"
+    validations:
+      required: true
+
+  - type: textarea
+    id: thoughts
+    attributes:
+      label: 感想・学び
+      description: 感想や学んだことを記載してください
+      placeholder: |
+        この記事を読んで学んだこと、感想、気づきなどを書いてください。
+    validations:
+      required: true
