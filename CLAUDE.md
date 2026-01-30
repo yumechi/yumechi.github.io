@@ -57,3 +57,12 @@ yumechi の個人ホームページです。プロフィールや読んだ記事
 プロジェクトをビルドしてローカルサーバーで確認する。
 
 **使い方**: `/build-test` を実行
+
+### process-blog-issue
+
+GitHub issueに記載されたブログ記事リクエストを処理し、記事を作成してPRを作成する。
+
+**使い方**: `/process-blog-issue` を実行
+- `blog-request` ラベルが付いた全てのオープンissueを自動的に処理
+- 各issueごとに別々のブランチとPRを作成
+- 特定のissue番号を指定した場合はそのissueのみ処理
