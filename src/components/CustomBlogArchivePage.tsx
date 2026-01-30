@@ -103,7 +103,7 @@ function listPostsByYearMonth(blogPosts: readonly ArchiveBlogPost[]): YearProp[]
   return result;
 }
 
-export default function BlogArchive({archive}: Props): ReactNode {
+export default function CustomBlogArchivePage({archive}: Props): ReactNode {
   const title = translate({
     id: 'theme.blog.archive.title',
     message: 'Archive',

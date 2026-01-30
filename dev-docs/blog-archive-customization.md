@@ -20,17 +20,9 @@ Docusaurusのブログアーカイブページを年・月別にグループ化�
 pnpm add @docusaurus/theme-common
 ```
 
-### 2. BlogArchivePage の swizzle
+### 2. カスタムアーカイブコンポーネントの作成
 
-```bash
-pnpm docusaurus swizzle @docusaurus/theme-classic BlogArchivePage --eject --typescript --danger
-```
-
-`src/theme/BlogArchivePage/index.tsx` が生成されます。
-
-### 3. BlogArchivePage のカスタマイズ
-
-生成されたファイルを以下の内容で置き換えます：
+`src/components/CustomBlogArchivePage.tsx` を作成します：
 
 ```tsx
 import React, {type ReactNode} from 'react';
@@ -138,7 +130,7 @@ function listPostsByYearMonth(blogPosts: readonly ArchiveBlogPost[]): YearProp[]
   return result;
 }
 
-export default function BlogArchive({archive}: Props): ReactNode {
+export default function CustomBlogArchivePage({archive}: Props): ReactNode {
   const title = translate({
     id: 'theme.blog.archive.title',
     message: 'Archive',
@@ -169,17 +161,36 @@ export default function BlogArchive({archive}: Props): ReactNode {
 }
 ```
 
-### 4. BlogListPaginator の swizzle（アーカイブリンク追加）
+### 3. docusaurus.config.ts の設定
+
+`docusaurus.config.ts` のブログ設定に `blogArchiveComponent` を追加します：
+
+```ts
+presets: [
+  [
+    'classic',
+    {
+      // ...
+      blog: {
+        showReadingTime: true,
+        routeBasePath: '/blog',
+        blogArchiveComponent: '@site/src/components/CustomBlogArchivePage',
+      },
+      // ...
+    },
+  ],
+],
+```
+
+### 4. BlogListPaginator の swizzle（アーカイブリンク追加、任意）
+
+ブログ一覧ページからアーカイブへのリンクを追加する場合：
 
 ```bash
 pnpm docusaurus swizzle @docusaurus/theme-classic BlogListPaginator --eject --typescript --danger
 ```
 
-`src/theme/BlogListPaginator/index.tsx` が生成されます。
-
-### 5. BlogListPaginator のカスタマイズ
-
-生成されたファイルを以下の内容で置き換えます：
+`src/theme/BlogListPaginator/index.tsx` を編集してリンクを追加：
 
 ```tsx
 import React, {type ReactNode} from 'react';
@@ -237,7 +248,7 @@ export default function BlogListPaginator(props: Props): ReactNode {
 }
 ```
 
-### 6. ビルド確認
+### 5. ビルド確認
 
 ```bash
 pnpm build
@@ -246,14 +257,21 @@ pnpm serve
 
 `/blog/archive` と `/blog` ページを確認します。
 
-## Docusaurusアップデート時の対応
+## swizzle との比較
 
-swizzleしたコンポーネントは **Unsafe** なので、Docusaurusのアップデートで壊れる可能性があります。
+| 方法 | メリット | デメリット |
+|------|----------|------------|
+| **blogArchiveComponent** | 設定で明示的に指定、独立したコンポーネント | - |
+| **swizzle** | デフォルトのコードをベースにできる | `src/theme/` に配置が必要、Unsafeの警告 |
+
+`blogArchiveComponent` を使う方が、何をカスタマイズしているか設定ファイルで明示的に分かるため推奨です。
+
+## Docusaurusアップデート時の対応
 
 ### 壊れた場合の対処
 
-1. 再度swizzleして最新のコンポーネントを取得
-2. カスタマイズ部分（年・月別グループ化ロジック等）を再適用
+1. `ArchiveBlogPost` 型や `Props` 型の変更を確認
+2. コンポーネントを新しいAPIに合わせて修正
 
 ### 確認すべきポイント
 
@@ -263,12 +281,13 @@ swizzleしたコンポーネントは **Unsafe** なので、Docusaurusのアッ
 
 ## 関連ファイル
 
-- `src/theme/BlogArchivePage/index.tsx`
-- `src/theme/BlogListPaginator/index.tsx`
-- `package.json` (`@docusaurus/theme-common` の依存)
+- `src/components/CustomBlogArchivePage.tsx` - カスタムアーカイブコンポーネント
+- `src/theme/BlogListPaginator/index.tsx` - アーカイブリンク追加（swizzle）
+- `docusaurus.config.ts` - `blogArchiveComponent` 設定
+- `package.json` - `@docusaurus/theme-common` の依存
 
 ## 参考リンク
 
+- [📦 plugin-content-blog | Docusaurus](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog)
 - [Blog Archive for Docusaurus | johnnyreilly](https://johnnyreilly.com/blog-archive-for-docusaurus)
 - [GitHub Issue #4431](https://github.com/facebook/docusaurus/issues/4431)
-- [Docusaurus Blog Documentation](https://docusaurus.io/docs/blog)
