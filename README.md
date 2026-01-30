@@ -1,41 +1,67 @@
-# Website
+# yumechi.github.io
 
-This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
+yumechi の個人ホームページです。プロフィールや読んだ記事の感想などを掲載しています。
 
-### Installation
+## 開発環境
 
-```
-$ pnpm install
-```
+[mise](https://mise.jdx.dev/) を使用して Node.js と pnpm を管理しています。
 
-### Local Development
+## 技術スタック
 
-```
-$ pnpm start
-```
+- **フレームワーク**: [Docusaurus 3.9.2](https://docusaurus.io/)
+- **言語**: TypeScript
+- **ランタイム**: Node.js 24+
+- **パッケージマネージャー**: pnpm
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## 環境構築/操作用のコマンド
 
-### Build
+### 依存関係のインストール
 
-```
-$ pnpm build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true pnpm deploy
+```bash
+mise run install
 ```
 
-Not using SSH:
+### 開発サーバーの起動
 
-```
-$ GIT_USER=<Your GitHub username> pnpm deploy
+```bash
+mise run dev
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### プロジェクトのビルド
+
+```bash
+mise run build
+```
+
+### ビルド済みプロジェクトの配信
+
+```bash
+mise run serve
+```
+
+### TypeScript 型チェック
+
+```bash
+mise run typecheck
+```
+
+### セキュリティ監査
+
+```bash
+mise run audit
+```
+
+### セキュリティ脆弱性の修正
+
+```bash
+mise run audit-fix
+```
+
+## 参照しているツール/フレームワークのライセンス
+
+- [Docusaurus](https://docusaurus.io/) - MIT License
+- [React](https://react.dev/) - MIT License
+
+## ライセンス
+
+このリポジトリのコンテンツは著作権で保護されています。コードは MIT License です。
