@@ -1,8 +1,42 @@
-# プロジェクト設定
+## コミュニケーション言語
 
-このプロジェクトは Node.js を使った Docusaurus ウェブサイトです。
+このプロジェクトでは日本語でコミュニケーションを取ります。日本語を利用できない場合のみ英語でコミュニケーションします。
 
-環境構築やコマンドの詳細は [README.md](./README.md) を参照してください。
+## プロジェクトの目的
+
+yumechi の個人ホームページです。プロフィールや読んだ記事の感想などを掲載しています。
+
+## 利用技術
+
+- Docusaurus 3.9.2
+- TypeScript
+- Node.js 24+
+- pnpm（mise経由で管理）
+
+## プロジェクト構成
+
+```
+.
+├── CLAUDE.md
+├── README.md
+├── LICENSE
+├── docusaurus.config.ts    # Docusaurus設定
+├── sidebars.ts             # サイドバー設定
+├── package.json
+├── tsconfig.json
+├── blog/                   # ブログ記事
+│   ├── _template.md        # ブログテンプレート
+│   ├── YYYY/               # 年別ディレクトリ
+│   │   └── MM-DD-slug/     # 記事ディレクトリ
+│   │       └── index.md
+│   └── authors.yml         # 著者情報
+├── docs/                   # ドキュメント（プロフィール等）
+├── src/
+│   ├── components/         # Reactコンポーネント
+│   ├── css/                # カスタムCSS
+│   └── pages/              # カスタムページ
+└── static/                 # 静的ファイル
+```
 
 ## Skills
 
@@ -11,13 +45,15 @@
 読んだ記事やスライドの感想を書くブログ記事を作成する。
 
 **使い方**: `/create-blog-page` を実行し、以下の情報を提供する：
-- 記事/スライドのタイトル
-- URL
+- ブログ記事のタイトル
+- slug（URLに使用する識別子）
 - タグ（任意）
+- 日付（デフォルト: 当日）
+- 資料のタイトルとURL
 - 感想・学び
 
-**処理内容**:
-1. `blog/_template.md` をベースに新しいブログ記事を作成
-2. ファイルは `blog/YYYY/MM-DD-slug/index.md` の形式で保存（年別ディレクトリ）
-3. slugはタイトルから自動生成（英数字とハイフンのみ）
-4. 作成日は当日の日付を使用
+### build-test
+
+プロジェクトをビルドしてローカルサーバーで確認する。
+
+**使い方**: `/build-test` を実行
