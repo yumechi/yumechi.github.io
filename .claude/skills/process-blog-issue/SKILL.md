@@ -38,7 +38,7 @@ issueテンプレートから以下のフィールドを抽出します：
 
 #### 2.2 ブランチを作成
 
-mainブランチから、issue番号を含むブランチを作成します：
+**重要**: 各issueのブランチは必ずmainブランチから派生させます。複数のissueを処理する場合も、毎回mainブランチに戻ってから新しいブランチを作成してください。
 
 ```bash
 git checkout main
@@ -103,9 +103,17 @@ Closes #<issue番号>
 Generated with Claude Code"
 ```
 
-### 3. 完了報告
+### 3. mainブランチに戻る
 
-全てのissueの処理が完了したら、ユーザーに以下を報告します：
+全てのissueの処理が完了したら、必ずmainブランチに戻ります：
+
+```bash
+git checkout main
+```
+
+### 4. 完了報告
+
+ユーザーに以下を報告します：
 
 - 処理したissueの数
 - 各issueに対して作成したPRのURL一覧
