@@ -105,6 +105,7 @@ const config: Config = {
           label: 'Profile',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog/archive', label: 'Archive', position: 'left'},
       ],
     },
     footer: {
@@ -120,6 +121,10 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
+            },
+            {
+              label: 'Blog Archive',
+              to: '/blog/archive',
             },
           ],
         },
