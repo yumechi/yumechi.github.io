@@ -36,7 +36,7 @@ mise run typecheck
 
 ## 技術スタック
 
-- **フレームワーク**: Docusaurus 3.8.1
+- **フレームワーク**: Docusaurus 3.9.2
 - **言語**: TypeScript
 - **ランタイム**: Node.js 24+
 - **パッケージマネージャー**: pnpm
