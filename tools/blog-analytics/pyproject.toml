@@ -1,0 +1,19 @@
+[project]
+name = "blog-analytics"
+version = "0.1.0"
+description = "Docusaurusブログの投稿統計グラフ生成ツール"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "altair>=5.5",
+    "vl-convert-python>=1.9",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11",
+    "ty>=0.0",
+]
+
+[tool.uv]
+package = false

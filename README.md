@@ -62,6 +62,10 @@ mise run audit-fix
 - [Docusaurus](https://docusaurus.io/) - MIT License
 - [React](https://react.dev/) - MIT License
 
+## ツール
+
+- [ブログ投稿統計グラフ生成ツール](./tools/blog-analytics/README.md) - ブログの投稿統計を棒グラフで可視化するツール
+
 ## ライセンス
 
 このリポジトリのコンテンツは著作権で保護されています。コードは MIT License です。

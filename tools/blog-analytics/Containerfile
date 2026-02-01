@@ -1,0 +1,22 @@
+# Python + uv環境でブログ投稿統計グラフを生成するコンテナ
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
+
+# 日本語フォントをインストール（グラフラベル用）
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    fonts-noto-cjk \
+    && rm -rf /var/lib/apt/lists/*
+
+# 作業ディレクトリ設定
+WORKDIR /app
+
+# pyproject.tomlをコピー
+COPY pyproject.toml .
+
+# 依存関係をインストール
+RUN uv sync --no-dev
+
+# メインスクリプトをコピー
+COPY blog_analytics.py .
+
+# エントリポイント
+ENTRYPOINT ["uv", "run", "python", "/app/blog_analytics.py"]
