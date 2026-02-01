@@ -5,66 +5,57 @@ description: ブログ投稿統計グラフを生成し、output ディレクト
 
 # Calc Blog Output
 
-ブログの投稿統計を集計し、年別の月間投稿数グラフをPNG形式で出力します。
+ブログの投稿統計を集計し、以下のグラフをPNG形式で出力します：
+- 年別の月間投稿数グラフ（monthly）
+- 各月の日別投稿数グラフ（daily）
 
 ## 実行手順
 
-### 1. ブログディレクトリの確認
+### 1. 出力ディレクトリの作成とコンテナのビルド
 
 ```bash
-ls blog/
+mkdir -p output && podman build -t blog-analytics tools/blog-analytics/
 ```
 
-存在する年ディレクトリを確認します（例: 2023, 2026）。
+### 2. 全グラフの並行生成
 
-### 2. 出力ディレクトリの作成
+以下のワンライナーで、存在する全ての年のmonthlyグラフと、投稿がある全ての月のdailyグラフを並行生成します：
 
 ```bash
-mkdir -p output
+# 年別monthlyグラフと月別dailyグラフを並行生成
+(
+  # monthlyグラフを並行生成
+  for year in $(ls -d blog/[0-9][0-9][0-9][0-9] 2>/dev/null | xargs -n1 basename); do
+    podman run --rm -v ./blog:/data/blog:ro -v ./output:/data/output blog-analytics --year "$year" --output "/data/output/${year}-monthly.png" &
+  done
+
+  # dailyグラフを並行生成（投稿がある年月のみ）
+  for year in $(ls -d blog/[0-9][0-9][0-9][0-9] 2>/dev/null | xargs -n1 basename); do
+    for month in $(ls blog/"$year"/ 2>/dev/null | grep -oE '^[0-9]{2}' | sort -u); do
+      podman run --rm -v ./blog:/data/blog:ro -v ./output:/data/output blog-analytics --year "$year" --month "$((10#$month))" --output "/data/output/${year}-${month}-daily.png" &
+    done
+  done
+
+  wait
+)
 ```
 
-### 3. コンテナのビルド
+### 3. 結果の確認
 
 ```bash
-podman build -t blog-analytics tools/blog-analytics/
-```
-
-### 4. 統計グラフの生成
-
-存在する各年について、月別統計グラフを生成します：
-
-```bash
-podman run --rm \
-  -v ./blog:/data/blog:ro \
-  -v ./output:/data/output \
-  blog-analytics --year <YYYY> --output /data/output/<YYYY>-monthly.png
-```
-
-例：
-- 2023年: `--year 2023 --output /data/output/2023-monthly.png`
-- 2026年: `--year 2026 --output /data/output/2026-monthly.png`
-
-### 5. 結果の確認
-
-```bash
-ls -la output/
+ls -la output/*.png
 ```
 
 生成されたグラフファイルを確認し、ユーザーに報告します。
 
-## オプション: 月間日別グラフ
+## 出力ファイル
 
-特定の月の日別グラフを生成する場合：
-
-```bash
-podman run --rm \
-  -v ./blog:/data/blog:ro \
-  -v ./output:/data/output \
-  blog-analytics --year <YYYY> --month <MM> --output /data/output/<YYYY>-<MM>-daily.png
-```
+- `output/YYYY-monthly.png` - 年間月別投稿数グラフ
+- `output/YYYY-MM-daily.png` - 月間日別投稿数グラフ
 
 ## 注意事項
 
 - `output/` ディレクトリは `.gitignore` に含まれています
 - コンテナ実行には Podman が必要です
 - 生成されたグラフはユーザーに表示して確認してもらいます
+- 並行実行により、従来より高速にグラフを生成できます
