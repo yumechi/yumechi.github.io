@@ -26,3 +26,7 @@ yarn-error.log*
 /docusaurus.config.js
 /sidebars.js
 /src/**/*.js
+
+# Blog analytics tool outputs
+/output/
+/tools/blog-analytics/uv.lock

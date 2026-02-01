@@ -66,3 +66,9 @@ GitHub issueに記載されたブログ記事リクエストを処理し、記�
 - `blog-request` ラベルが付いた全てのオープンissueを自動的に処理
 - 各issueごとに別々のブランチとPRを作成
 - 特定のissue番号を指定した場合はそのissueのみ処理
+
+## ツール
+
+### ブログ投稿統計グラフ生成ツール
+
+ブログの投稿統計をグラフ化するツールです。詳細は [tools/blog-analytics/CLAUDE.md](./tools/blog-analytics/CLAUDE.md) を参照してください。
