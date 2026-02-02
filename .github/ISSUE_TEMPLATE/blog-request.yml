@@ -1,16 +1,13 @@
 name: ブログ記事リクエスト
 description: 読んだ記事やスライドの感想をブログ記事として作成するリクエスト
-title: "[Blog] "
+title: ""
 labels: ["blog-request"]
 body:
-  - type: input
-    id: blog-title
+  - type: markdown
     attributes:
-      label: ブログ記事のタイトル
-      description: ブログページに表示されるタイトル
-      placeholder: "例: React Hooksの基礎を学んだ"
-    validations:
-      required: true
+      value: |
+        **issueのタイトルがブログ記事のタイトルになります。**
+        わかりやすいタイトルを入力してください。
 
   - type: input
     id: slug
@@ -34,10 +31,10 @@ body:
     id: source-title
     attributes:
       label: 資料のタイトル
-      description: 読んだ記事/スライドのタイトル
+      description: 読んだ記事/スライドのタイトル（任意。省略時はURLがそのまま表示されます）
       placeholder: "例: React Hooks入門ガイド"
     validations:
-      required: true
+      required: false
 
   - type: input
     id: source-url
