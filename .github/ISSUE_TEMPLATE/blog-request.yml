@@ -1,6 +1,6 @@
 name: ブログ記事リクエスト
 description: 読んだ記事やスライドの感想をブログ記事として作成するリクエスト
-title: ""
+title: "タイトル"
 labels: ["blog-request"]
 body:
   - type: markdown
