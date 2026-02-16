@@ -1,0 +1,6 @@
+version: 1
+rules:
+  - expected: Raspberry Pi
+    patterns:
+      - /Raspberry Pi/
+      - /Ras?p?berry [P|p]i/
