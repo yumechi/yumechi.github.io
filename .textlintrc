@@ -1,0 +1,21 @@
+{
+  "filters": {},
+  "rules": {
+    "max-ten": {
+      "max": 3
+    },
+    "preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": {
+            "space": "always"
+        }
+    },
+    "preset-ja-technical-writing": true,
+    "spellcheck-tech-word": true,
+    "no-mix-dearu-desumasu": true,
+    "prh": {
+      "rulePaths": [
+        "./prh.yml"
+      ]
+    }
+  }
+}
