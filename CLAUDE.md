@@ -86,6 +86,42 @@ mainブランチに切り替え、マージ済みのローカルブランチを�
 - リモートで削除されたブランチ参照を整理
 - `gh poi` でマージ済みブランチを削除
 
+### review-md
+
+Markdown 記事の誤字脱字チェックと textlint による校正を行う。
+
+**使い方**: `/review-md <ファイル名>` を実行
+- `blog/` 配下を自動で検索する
+- 誤字脱字チェック + textlint による校正ルール違反を検出
+- 修正適用前にユーザーに確認を取る
+
+## textlint
+
+ブログ記事の日本語品質チェックに textlint を使用している。
+
+### 設定ファイル
+
+- `.textlintrc` — textlint ルール設定
+- `prh.yml` — 表記ゆれチェック用の辞書
+
+### 導入ルール
+
+| ルール | 用途 |
+|---|---|
+| `preset-ja-spacing` | 全角・半角間のスペース等 |
+| `preset-ja-technical-writing` | 技術文書向けの文章ルール |
+| `preset-ai-writing` | AI っぽい記述パターンの検出 |
+| `no-mix-dearu-desumasu` | ですます/である調の混在検出 |
+| `max-ten` | 一文中の読点の数を制限 |
+| `spellcheck-tech-word` | 技術用語のスペルチェック |
+| `terminology` | 一般的な技術用語の表記チェック |
+| `prh` | prh.yml による表記ゆれチェック |
+
+### コマンド
+
+- `pnpm textlint <ファイルパス>` — 校正チェック実行
+- `pnpm textlint --fix <ファイルパス>` — 自動修正可能な項目を修正
+
 ## ツール
 
 ### ブログ投稿統計グラフ生成ツール
