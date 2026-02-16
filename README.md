@@ -57,6 +57,18 @@ mise run audit
 mise run audit-fix
 ```
 
+### textlint による校正チェック
+
+```bash
+pnpm textlint <ファイルパス>
+```
+
+### textlint による自動修正
+
+```bash
+pnpm textlint --fix <ファイルパス>
+```
+
 ## 参照しているツール/フレームワークのライセンス
 
 - [Docusaurus](https://docusaurus.io/) - MIT License
