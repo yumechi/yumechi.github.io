@@ -58,6 +58,9 @@ importers:
       textlint-rule-no-mix-dearu-desumasu:
         specifier: ^6.0.4
         version: 6.0.4
+      textlint-rule-preset-ai-writing:
+        specifier: ^1.1.0
+        version: 1.1.0
       textlint-rule-preset-ja-spacing:
         specifier: ^2.4.3
         version: 2.4.3
@@ -73,6 +76,9 @@ importers:
       textlint-rule-spellcheck-tech-word:
         specifier: ^5.0.0
         version: 5.0.0(textlint@15.5.1)
+      textlint-rule-terminology:
+        specifier: ^5.2.16
+        version: 5.2.16
       typescript:
         specifier: ~5.2.2
         version: 5.2.2
@@ -5628,6 +5634,10 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+  strip-json-comments@5.0.3:
+    resolution: {integrity: sha512-1tB5mhVo7U+ETBKNf92xT4hrQa3pm0MZ0PQvuDnWgAAGHDsfp4lPSpiS6psrSiet87wyGPh9ft6wmhOMQ0hDiw==}
+    engines: {node: '>=14.16'}
+
   structured-source@3.0.2:
     resolution: {integrity: sha512-Ap7JHfKgmH40SUjumqyKTHYHNZ8GvGQskP34ks0ElHCDEig+bYGpmXVksxPSrgcY9rkJqhVMzfeg5GIpZelfpQ==}
 
@@ -5788,6 +5798,9 @@ packages:
   textlint-rule-no-zero-width-spaces@1.0.1:
     resolution: {integrity: sha512-AkxpzBILGB4YsXddzHx2xqpXmqMv5Yd+PQm4anUV+ADSJuwLP1Jd6yHf/LOtu9j3ps8K3XM9vQrXRK73z0bU3A==}
 
+  textlint-rule-preset-ai-writing@1.1.0:
+    resolution: {integrity: sha512-bZEIdShA7RI0U1PkTA5K8PkDsh7LGs24nLQpnKgkfvcGfXEXZNRNGfS/b3oZQd4A4xydNCMKgk5M1+JKDKWFCQ==}
+
   textlint-rule-preset-ja-spacing@2.4.3:
     resolution: {integrity: sha512-WAiWY9TOE8/bRdl14XJdjkPQcV0hLS4O+PCUYU1yxXmJhZ8V3ciw2GYqpA9GL73qAxL25UD6mkf1yfz6aJ4qSA==}
 
@@ -5810,6 +5823,10 @@ packages:
     resolution: {integrity: sha512-BvQiWP5PZzRQQZLpGaai9XzQuQKGmJoP1wIgU8AiIGViEvX+NPoUUK4HLsZd31m0tBpQOU/4+rpy130jUf3Z8A==}
     peerDependencies:
       textlint: '>= 5.6.0'
+
+  textlint-rule-terminology@5.2.16:
+    resolution: {integrity: sha512-1HQotOLJb6kGAgmRYEA9KiIU+fQupZcOVpZEEhFwmRempvpNnhKowa7Zfpss2v6sbp8Ya+iXRs9xKGw+xheCbQ==}
+    engines: {node: '>=20'}
 
   textlint-tester@13.4.1:
     resolution: {integrity: sha512-Ubm9kUZ/NyY0Ggo1RkW2o5QSx6EJ/ogMT1kD5b5pk4cdFTWpUSs8StDMROgcz29wPhvS6sY/35qYALzqyZh8ew==}
@@ -13751,6 +13768,8 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
+  strip-json-comments@5.0.3: {}
+
   structured-source@3.0.2:
     dependencies:
       boundary: 1.0.1
@@ -13984,6 +14003,11 @@ snapshots:
 
   textlint-rule-no-zero-width-spaces@1.0.1: {}
 
+  textlint-rule-preset-ai-writing@1.1.0:
+    dependencies:
+      '@textlint/regexp-string-matcher': 2.0.2
+      textlint-util-to-string: 3.3.4
+
   textlint-rule-preset-ja-spacing@2.4.3:
     dependencies:
       textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana: 2.4.3
@@ -14060,6 +14084,11 @@ snapshots:
       spellcheck-technical-word: 2.0.0
       textlint: 15.5.1
       textlint-rule-helper: 1.2.0
+
+  textlint-rule-terminology@5.2.16:
+    dependencies:
+      strip-json-comments: 5.0.3
+      textlint-rule-helper: 2.5.0
 
   textlint-tester@13.4.1:
     dependencies:
