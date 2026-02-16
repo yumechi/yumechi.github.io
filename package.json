@@ -48,7 +48,8 @@
   },
   "pnpm": {
     "overrides": {
-      "gray-matter>js-yaml": "3.14.2"
+      "gray-matter>js-yaml": "3.14.2",
+      "qs": ">=6.14.2"
     }
   }
 }
