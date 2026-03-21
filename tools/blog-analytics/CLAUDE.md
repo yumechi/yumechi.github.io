@@ -64,5 +64,5 @@ podman run --rm \
 ## 注意事項
 
 - 出力ディレクトリ（`/output/`）はgitignore対象です
-- `uv.lock` は自動生成されるためgitignore対象です
+- `uv.lock` はバージョン固定のためコミット対象です（自動生成ファイル）
 - ブログディレクトリは `blog/YYYY/MM-DD-slug/index.md` 形式を前提としています

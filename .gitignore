@@ -29,4 +29,3 @@ yarn-error.log*
 
 # Blog analytics tool outputs
 /output/
-/tools/blog-analytics/uv.lock
