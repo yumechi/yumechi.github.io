@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "minimumReleaseAge": "7 days",
+  "packageRules": [
+    {
+      "matchManagers": ["pip_requirements", "pep621"],
+      "minimumReleaseAge": "7 days"
+    }
+  ]
+}
