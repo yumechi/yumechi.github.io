@@ -33,7 +33,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: tools/blog-analytics
-        run: uv sync
+        run: uv sync --frozen
 
       - name: Create output directory
         run: mkdir -p output
