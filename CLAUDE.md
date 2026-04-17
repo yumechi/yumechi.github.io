@@ -38,6 +38,24 @@ yumechi の個人ホームページです。プロフィールや読んだ記事
 └── static/                 # 静的ファイル
 ```
 
+## ブログ記事の規約
+
+### slug 命名規則
+
+- **使用可能文字**: 英数字とアンダースコア（`_`）のみ
+- **ハイフン（`-`）は使用しない**（URL パターンを統一するため）
+- 複数単語を区切る場合はアンダースコアを使う
+- 例: `sre_kaigi_2026_cognitive_load`、`react_hooks_basics`
+
+### ディレクトリ構成
+
+- ブログ記事は `blog/YYYY/MM-DD-<slug>/index.md` に配置する
+- `YYYY` は年、`MM-DD` は月日（Docusaurus の日付パースのためハイフン区切り必須）
+- `<slug>` 部分は上記の slug 命名規則に従う
+- 例: `blog/2026/02-01-sre_kaigi_2026_cognitive_load/index.md`
+
+frontmatter の `slug` フィールドには先頭にスラッシュを付けて記述する（例: `slug: /sre_kaigi_2026_cognitive_load`）。
+
 ## Skills
 
 ### create-blog-page
