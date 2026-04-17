@@ -13,8 +13,8 @@ body:
     id: slug
     attributes:
       label: slug
-      description: URLに使用される識別子（英数字とハイフンのみ）
-      placeholder: "例: react-hooks-basics"
+      description: URLに使用される識別子（英数字とアンダースコアのみ、ハイフンは使わない）
+      placeholder: "例: react_hooks_basics"
     validations:
       required: true
 
