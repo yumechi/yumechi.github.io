@@ -91,8 +91,10 @@ git push -u origin blog/issue-<issue番号>
 
 #### 2.5 PRを作成
 
+PRタイトルはissueの `title` フィールドをそのまま使用します（資料タイトルではなく、issueタイトル）。
+
 ```bash
-gh pr create --title "feat: <ブログ記事のタイトル>" --body "## Summary
+gh pr create --title "feat: <issueのtitleフィールド>" --body "## Summary
 
 - issueに基づいてブログ記事を作成しました
 
