@@ -41,7 +41,7 @@
     "textlint-rule-prh": "^6.1.0",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
     "textlint-rule-terminology": "^5.2.16",
-    "typescript": "~5.2.2"
+    "typescript": "~6.0.2"
   },
   "browserslist": {
     "production": [
