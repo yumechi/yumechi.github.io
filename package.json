@@ -17,10 +17,10 @@
     "textlint:fix": "textlint --fix"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.9.2",
-    "@docusaurus/plugin-google-gtag": "^3.9.2",
-    "@docusaurus/preset-classic": "^3.9.2",
-    "@docusaurus/theme-common": "^3.9.2",
+    "@docusaurus/core": "^3.10.0",
+    "@docusaurus/plugin-google-gtag": "^3.10.0",
+    "@docusaurus/preset-classic": "^3.10.0",
+    "@docusaurus/theme-common": "^3.10.0",
     "@mdx-js/react": "^3.1.0",
     "clsx": "^1.2.1",
     "prism-react-renderer": "^2.4.1",
@@ -28,9 +28,9 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.9.2",
-    "@docusaurus/tsconfig": "^3.9.2",
-    "@docusaurus/types": "^3.9.2",
+    "@docusaurus/module-type-aliases": "^3.10.0",
+    "@docusaurus/tsconfig": "^3.10.0",
+    "@docusaurus/types": "^3.10.0",
     "textlint": "^15.5.1",
     "textlint-rule-max-ten": "^5.0.0",
     "textlint-rule-no-mix-dearu-desumasu": "^6.0.4",
@@ -68,7 +68,8 @@
       "ajv@<6.14.0": ">=6.14.0",
       "ajv@>=7.0.0-alpha.0 <8.18.0": ">=8.18.0",
       "serialize-javascript@<=7.0.2": "7.0.3",
-      "svgo@>=3.0.0 <3.3.3": "3.3.3"
+      "svgo@>=3.0.0 <3.3.3": "3.3.3",
+      "webpackbar": "^7.0.0"
     }
   }
 }
