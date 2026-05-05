@@ -5,7 +5,7 @@ description = "Docusaurusブログの投稿統計グラフ生成ツール"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "altair>=5.5",
+    "altair>=6.1.0",
     "vl-convert-python>=1.9",
 ]
 
