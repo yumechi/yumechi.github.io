@@ -8,7 +8,7 @@ yumechi の個人ホームページです。プロフィールや読んだ記事
 
 ## 利用技術
 
-- Docusaurus 3.9.2
+- Docusaurus 3.10.1
 - TypeScript
 - Node.js 24+
 - pnpm（mise経由で管理）
@@ -24,18 +24,25 @@ yumechi の個人ホームページです。プロフィールや読んだ記事
 ├── sidebars.ts             # サイドバー設定
 ├── package.json
 ├── tsconfig.json
+├── .mise.toml              # mise（Node.js/pnpm）設定
+├── .textlintrc             # textlint設定
+├── prh.yml                 # 表記ゆれ辞書
 ├── blog/                   # ブログ記事
 │   ├── _template.md        # ブログテンプレート
 │   ├── YYYY/               # 年別ディレクトリ
 │   │   └── MM-DD-slug/     # 記事ディレクトリ
 │   │       └── index.md
 │   └── authors.yml         # 著者情報
+├── dev-docs/               # 開発用ドキュメント
 ├── docs/                   # ドキュメント（プロフィール等）
 ├── src/
 │   ├── components/         # Reactコンポーネント
 │   ├── css/                # カスタムCSS
-│   └── pages/              # カスタムページ
-└── static/                 # 静的ファイル
+│   ├── pages/              # カスタムページ
+│   └── theme/              # Docusaurusテーマのswizzle
+├── static/                 # 静的ファイル
+└── tools/                  # 補助ツール
+    └── blog-analytics/     # ブログ投稿統計グラフ生成ツール
 ```
 
 ## ブログ記事の規約

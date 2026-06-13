@@ -8,7 +8,7 @@ yumechi の個人ホームページです。プロフィールや読んだ記事
 
 ## 技術スタック
 
-- **フレームワーク**: [Docusaurus 3.9.2](https://docusaurus.io/)
+- **フレームワーク**: [Docusaurus 3.10.1](https://docusaurus.io/)
 - **言語**: TypeScript
 - **ランタイム**: Node.js 24+
 - **パッケージマネージャー**: pnpm
