@@ -55,14 +55,8 @@
       "last 5 safari version"
     ]
   },
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@11.6.0",
   "engines": {
     "node": ">=22.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "serialize-javascript@<=7.0.2": "7.0.3",
-      "webpackbar": "^7.0.0"
-    }
   }
 }

@@ -1,3 +1,6 @@
+allowBuilds:
+  core-js: false
+
 minimumReleaseAge: 10080 # 7 days
 
 overrides:
@@ -9,3 +12,5 @@ overrides:
   on-headers@<1.1.0: '>=1.1.0'
   qs@<6.14.1: '>=6.14.1'
   webpack-dev-server@<=5.2.0: '>=5.2.1'
+  serialize-javascript@<=7.0.2: '7.0.3'
+  webpackbar: '^7.0.0'
