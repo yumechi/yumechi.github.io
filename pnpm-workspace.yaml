@@ -4,7 +4,7 @@ allowBuilds:
 minimumReleaseAge: 10080 # 7 days
 
 overrides:
-  js-yaml@<3.14.2: '>=3.14.2'
+  js-yaml@<3.14.2: '>=3.14.2 <4'
   js-yaml@>=4.0.0 <4.1.1: '>=4.1.1'
   lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
   mdast-util-to-hast@>=13.0.0 <13.2.1: '>=13.2.1'
