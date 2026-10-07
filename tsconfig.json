@@ -1,4 +1,11 @@
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
-  "extends": "@docusaurus/tsconfig"
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    // 継承元の baseUrl は @docusaurus/tsconfig のディレクトリ基準になり @site/* が解決できないため上書きする
+    "baseUrl": ".",
+    // TypeScript 6 では baseUrl が非推奨 (TS5101) のため抑制する。
+    // baseUrl を使わない @docusaurus/tsconfig 安定版が出たら両方とも削除する
+    "ignoreDeprecations": "6.0"
+  }
 }
