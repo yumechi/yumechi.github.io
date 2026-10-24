@@ -9,6 +9,14 @@ updates:
       timezone: "Asia/Tokyo"
     cooldown:
       default-days: 7
+    groups:
+      # react と react-dom は同じバージョンでないとビルドが失敗するため、まとめて更新する
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
   - package-ecosystem: "uv"
     directory: "/tools/blog-analytics"
     schedule:
